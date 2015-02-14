@@ -30,13 +30,17 @@ namespace CalculMaths
         }
         public int PGCD()
         {
+            int nombre1 = nb1;
+            int nombre2 = nb2;
             int reste = nb1 % nb2;
-            while (reste !=0)
+            while (reste != 0)
             {
-               nb1=nb2;
-               nb2=reste;
-               reste=nb1 % nb2;
+                nb1 = nb2;
+                nb2 = reste;
+                reste = nb1 % nb2;
             }
+            nb1 = nombre1;
+            nb2 = nombre2;
             return nb2;
         }
         public int PPCM() // non encore implémentée
