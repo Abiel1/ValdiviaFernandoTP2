@@ -30,18 +30,20 @@ namespace CalculMaths
         }
         public int PGCD()
         {
-            int reste = nb1 % nb2;
-            while (reste !=0)
+            int nombre1 = nb1;
+            int nombre2 = nb2;
+            int reste = nombre1 % nombre2;
+            while (reste != 0)
             {
-               nb1=nb2;
-               nb2=reste;
-               reste=nb1 % nb2;
+                nombre1 = nombre2;
+                nombre2 = reste;
+                reste = nombre1 % nombre2;
             }
-            return nb2;
+            return nombre2;
         }
-        public int PPCM() // non encore implémentée
+        public int PPCM() 
         {
-            return 1;
+            return Produit() / PGCD();
         }
     }
 }
