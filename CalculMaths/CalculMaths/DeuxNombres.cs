@@ -45,7 +45,12 @@ namespace CalculMaths
         }
         public int PPCM() // non encore implémentée
         {
-            return 1;
+            int ppcm = nb1;
+            while (ppcm % nb2 != 0)
+            {
+                ppcm = ppcm + nb1;
+            }
+            return ppcm;
         }
     }
 }
