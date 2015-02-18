@@ -32,25 +32,19 @@ namespace CalculMaths
         {
             int nombre1 = nb1;
             int nombre2 = nb2;
-            int reste = nb1 % nb2;
+            int reste = nombre1 % nombre2;
             while (reste != 0)
             {
-                nb1 = nb2;
-                nb2 = reste;
-                reste = nb1 % nb2;
+                nombre1 = nombre2;
+                nombre2 = reste;
+                reste = nombre1 % nombre2;
             }
-            nb1 = nombre1;
-            nb2 = nombre2;
-            return nb2;
+            return nombre2;
         }
-        public int PPCM() // non encore implémentée
+
+        public int PPCM() 
         {
-            int ppcm = nb1;
-            while (ppcm % nb2 != 0)
-            {
-                ppcm = ppcm + nb1;
-            }
-            return ppcm;
+            return Produit() / PGCD();
         }
 
         public int MaxDeuxNombres(int nb1, int nb2)
@@ -58,7 +52,8 @@ namespace CalculMaths
             if (nb1 > nb2)
                 return nb1;
 
-            return nb2;   
+            return nb2;
+        }
 
         public int MinDeuxNombres(int nb1, int nb2)
         {
