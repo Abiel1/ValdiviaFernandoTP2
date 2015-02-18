@@ -15,6 +15,7 @@ namespace CalculMaths
             Console.WriteLine("Le produit est : " + mesDeuxNombres.Produit());
             Console.WriteLine("Le PGCD est : " + mesDeuxNombres.PGCD());
             Console.WriteLine("Le PPCM est : " + mesDeuxNombres.PPCM());
+            Console.WriteLine("Le nombre plus grand est : " + mesDeuxNombres.MaxDeuxNombres(98, 78));
             Console.WriteLine("Appuyez sur une touche pour continuer ...");
             Console.ReadKey();
         }
